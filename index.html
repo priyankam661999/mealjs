@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome ICONS -->
+    <script src="https://kit.fontawesome.com/41a8872626.js" crossorigin="anonymous"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Meal App</title>
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+    <header class="header-container">
+        <!-- Navbar Section -->
+        <navbar class="nav-container">
+            <img id="meal-logo" src="meal.jpg" alt="meal-logo" />
+            <h2>&nbsp;&nbsp;Search Your <i><u style="color: goldenrod;">MEAL</u></i></h2>
+            <!-- Navbar Links -->
+            <div class="nav-links">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="fav.html">Favourite </a>
+                </li>
+            </div>
+        </navbar>
+        
+    </header>
+
+    <main>
+        <!-- Search Container for Searching Meals -->
+        
+        <div class="container">
+            
+            <div class="cover">
+
+                <div class="top">
+                    <span class="search-container">
+                        <input class="search-input" type="text" placeholder="Search Your Meal..." />
+                        <span class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Displays the Meals -->
+        <div class="meals-container">
+           
+            <div class="meal">
+               
+            </div>
+        </div>
+        <!-- Displays the Details of the Meals -->
+        <div class="pop-up-container">
+            <div class="pop-up">
+                <i class="fa-solid fa-x"></i>
+                <div class="pop-up-inner"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+
+</html>
