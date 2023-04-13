@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 100vw;
+}
+
+/* Navbar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    gap: 20px;
+}
+.nav-container img{
+    mix-blend-mode: color-burn;
+}
+.nav-container #meal-logo {
+    width: auto;
+    height: 100px;
+    border-radius: 40%;
+    padding: 5px;
+    margin-left: 10px;
+}
+.nav-links a:hover {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+background-color: gold;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 3px 5px;
+   
+}
+
+.header-container .nav-links li {
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+:root {
+    --primary-clr: orange;
+    --primary-rgba-7: rgba(0, 0, 0, 0.693);
+    --secondary-clr: orangered;
+    --secondary-rgba: rgba(255, 255, 255, 0.115);
+    --secondary-rgba-3: rgba(255, 255, 255, 0.3);
+}
+
+/* Meal Container CSS */
+.meal {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.covermeal h2 {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: black;
+    font-size: 35px;
+    margin-bottom: 1em;
+    text-shadow: 0 0 0.4rem var(--secondary-rgba-3);
+}
+.covermeal {
+    width: clamp(300px, 60vw, 400px);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: 200ms ease-in-out background-color;
+    border: 1px solid whitesmoke;
+}
+
+.covermeal:hover {
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-10px);
+}
+
+.covermeal-img-container {
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+}
+
+.covermeal-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+
+}
+
+.meal-name p {
+    color: orange;
+    margin-left: 0rem;
+}
+
+.meal-name p:hover {
+    color: black;
+}
+
+.meal-name i {
+    color: #ff0000;
+    text-shadow: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.meal-name i:hover {
+    transform: scale(1.2);
+    right: 0rem;
+}
+
+.covermeal:hover {
+    background: rgb(255, 106, 171);
+    background: radial-gradient(circle, #ff926a 5%, #94e9bf 74%);
+}
+
+.covermeal:hover .meal-name {
+    color: black;
+    text-shadow: 0 0 0.2rem green;
+}
+
+.recipe-link a {
+    text-decoration: none;
+}
+.recipe-link a:hover{
+    color: white;
+}
+
+.recipe-link a button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.8rem;
+    border: 2px solid white;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.recipe-link a button:hover{
+    background-color: #ff0000;
+    border: 2px solid white;
+    color: white;
+    transform: scaleX(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Meal Details Pop-up CSS */
+.pop-up-container {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.pop-up {
+    width: clamp(200px, 92vw, 900px);
+    max-height: 90vh;
+   
+    background-color: orange;
+    color:white;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.pop-up-inner {
+    display: flex;
+    gap: 2rem;
+}
+
+.pop-up i {
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    width: auto;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+}
+
+.pop-up i:hover {
+    background-color: white;
+    color: red;
+}
+.pop-up .left i {
+    display: none;
+}
+
+.right {
+    overflow-y: scroll;
+    max-height: 85vh;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+}
+
+.right div {
+    margin-bottom: 2rem;
+}
+
+.right ul li {
+    padding-right: 2rem;
+    list-style-position: inside;
+}
+
+.right .meal-info,
+.right ul {
+    margin-top: 0.5rem;
+}
